@@ -3,13 +3,10 @@
 <head>
   <script>
     function loaded() {
-      console.log("Beep!");
-      window.setTimeout(CloseMe, 2000);
+      console.log("Beep!" + window.location.pathname);
+      window.opener.postMessage('Transaction Complete: ' + window.location.pathname, '*');
     }
 
-    function CloseMe() {
-      window.close();
-    }
   </script>
 </head>
 
