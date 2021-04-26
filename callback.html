@@ -77,19 +77,6 @@
       var a = 0;
       console.log("Beep!" + window.location.pathname);
       window.opener.postMessage('None', '*');
-
-      setInterval(() => {
-        if (a < 16) {
-          let statusApiComplete = localStorage.getItem("statusApiComplete");
-          if (statusApiComplete && statusApiComplete === true) {
-            window.close();
-          } else {
-            a = a + 1;
-          }
-        } else {
-          window.close();
-        }
-      }, 1000);
     }
 
   </script>
